@@ -1,4 +1,4 @@
-// http://codeforces.com/problemset/problem/454/A
+// http://codeforces.com/problemset/problem/551/A
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -8,14 +8,25 @@ using namespace std;
 
 void solve()
 {
-    int n ;
+    int n , maxx = 0 , arr[2001] = {0};
     cin >> n ;
-    char pattern[n][n] ;
-    for(int i =  0; i < n ; i++) {
-        for(int j = 0 ; j < n ; j++) {
-            pattern[i][j] = '*' ;    
-        }
+    vector<int> v(n);
+    for(auto &x : v) {
+        cin >> x ;
+        if(maxx < x) maxx = x ;
+        arr[x]++ ;
     }
+    int rank = -1 ;
+    for(int i = maxx ; i>= 1 ; i--) {
+        for(int j = 0 ; j < n ; j++) {
+            if(v[j] == i) {
+                v[j] = rank ;
+            }
+        }
+        rank = rank + (arr[i] * -1) ;
+    }
+    for(auto x : v) cout << abs(x) << " " ;
+    cout << endl ;
 }
 int32_t main()
 {

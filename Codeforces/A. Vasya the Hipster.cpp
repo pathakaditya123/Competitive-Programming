@@ -1,4 +1,4 @@
-// http://codeforces.com/problemset/problem/454/A
+// http://codeforces.com/problemset/problem/581/A
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -8,14 +8,12 @@ using namespace std;
 
 void solve()
 {
-    int n ;
-    cin >> n ;
-    char pattern[n][n] ;
-    for(int i =  0; i < n ; i++) {
-        for(int j = 0 ; j < n ; j++) {
-            pattern[i][j] = '*' ;    
-        }
-    }
+    int red , blue ;
+    cin >> red >> blue ;
+    cout << min(red, blue) << " "  ;
+    int r = red - min(red, blue) ;
+    int b = blue - min(red, blue) ;
+    cout << ( r + b ) / 2 << endl ; 
 }
 int32_t main()
 {
