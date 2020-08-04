@@ -8,23 +8,27 @@ using namespace std;
 
 void solve()
 {
-    int n , ans = 0 , counter;
+    int n , counter = 0 ;
     cin >> n ;
     char cake [n][n] ;
-    for(int i = 0 ; i < n ; i++) {
+    for (int i = 0 ; i < n ; i++) {
         for(int j = 0 ; j < n ; j++) {
             cin >> cake[i][j] ;
         }
     }
-    for(int i = 0 ; i < n ; i++) {
-        //int counter = 0 ;
-        for(int j = 0 ; j < n;  j++) {
-            //int counter = 0 ;
-            if(cake[i][j] == 'C') counter++ ;
+    
+    for (int i = 0 ; i < n ; i++) 
+    {
+        for (int j = 0 ; j < n ; j++) 
+        {
+            for (int l = j + 1 ; l < n ; l++) 
+            {
+                if(cake[i][j] == 'C' and cake[i][l] == 'C') counter++ ;
+                if(cake[j][i] == 'C' and cake[l][i] == 'C') counter++ ;
+            }
         }
-        ans += ceil(counter / 2) ;
-        counter = 0 ;
     }
+    cout << counter << endl ;
 }
 int32_t main()
 {
