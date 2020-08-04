@@ -10,12 +10,14 @@ void solve()
 {
     int n ;
     cin >> n ;
-    char pattern[n][n] ;
-    for(int i =  0; i < n ; i++) {
-        for(int j = 0 ; j < n ; j++) {
-            pattern[i][j] = '*' ;    
+    for(int i = 1 ; i <= n ; i++) {
+        for(int j = 1 ; j <= n ; j++) {
+            int odd = abs (i - (n + 1) / 2 ) + abs ( j - (n + 1) /2 ) ;
+            if (odd > n / 2 ) cout << "*" ;
+            else cout << "D" ;
         }
-    }
+        cout << endl ;
+    }   
 }
 int32_t main()
 {

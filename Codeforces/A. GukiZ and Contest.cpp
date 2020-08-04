@@ -23,7 +23,7 @@ void solve()
                 v[j] = rank ;
             }
         }
-        rank = rank + (arr[i] * -1) ;
+        rank += (arr[i] * -1) ;
     }
     for(auto x : v) cout << abs(x) << " " ;
     cout << endl ;
