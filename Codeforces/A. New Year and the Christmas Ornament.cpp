@@ -1,4 +1,4 @@
-// https://codeforces.com/problemset/problem/1092/A
+// https://codeforces.com/problemset/problem/1091/A
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -8,33 +8,22 @@ using namespace std;
 
 void solve()
 {
-    vector<int> v(3) ;
-    int min_index = 999 ;
-    for(int i = 0 ; i < 3 ; i++ ) {
-        cin >> v[i] ;
-        if (v[i] < min_index) {
-            min_index = i ;
-        }
+    int a , b , c ;
+    cin >> a >> b >> c ;
+    for(int i = a ; i >= 1 ; i--) {
+        if(i + 1 <= b and i + 2 <= c) {
+            a = i ;
+            break ;
+        } 
     }
-    if(min_index == 0) {
-        if( v[0] + 1 <= v[1] and v[0] + 2 <= v[2]) {
-
-        }
-    }
-    if(min_index == 1) {
-        
-    }
-    if(min_index == 2) {
-        
-    }
-    
+    cout << 3 * a  + 3 << endl ;
 }
 
 int32_t main()
 {
     fast ;
     int testcases = 1 ;
-    cin >> testcases ;
+    //cin >> testcases ;
     while(testcases--)
     {
         solve() ;
