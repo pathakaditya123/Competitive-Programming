@@ -1,5 +1,4 @@
-// http://codeforces.com/problemset/problem/818/A
-
+// https://codeforces.com/problemset/problem/1041/A
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -8,12 +7,17 @@ using namespace std;
 
 void solve()
 {
-    int n , k ;
-    cin >> n >> k ;
-    int a = ( (n / 2 ) / ( k + 1) ) ;
-    cout << a << " " << k * a << " " << n - (a + ( k * a )) << endl ;
+	int n ;
+    cin >> n ;
+    int minn = 9999999999999999 , maxx = 0 ;
+    vector <int> v(n) ;
+    for (auto &x : v ) {
+        cin >> x ;
+        if (maxx < x) maxx = x ;
+        if (minn > x) minn = x ; 
+    }
+    cout << maxx - ( (minn - 1) + n ) << endl ;
 }
-
 int32_t main()
 {
     fast ;
@@ -23,7 +27,7 @@ int32_t main()
     {
         solve() ;
     }
-    return 0;
+    return 0 ;
 }
 /*  CODED BY:-
  ___________________________________

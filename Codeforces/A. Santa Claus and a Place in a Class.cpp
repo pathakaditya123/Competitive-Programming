@@ -7,7 +7,13 @@ using namespace std;
 void solve() {
     int n , m , k ;
     cin >> n >> m >> k ;
-    double a = n ;
+    int p = ( k  - 1) / 2 ;
+    int lane  = ( p / m ) + 1  ;
+    int desk = p % m + 1 ;
+    char side ;
+    if (k % 2) side = 'L' ;
+    else side = 'R' ;
+    cout << lane << " " << desk << " " << side << endl ; 
 }
 
 int32_t main()

@@ -1,5 +1,4 @@
-// http://codeforces.com/problemset/problem/818/A
-
+// https://codeforces.com/problemset/problem/1250/F
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -8,12 +7,18 @@ using namespace std;
 
 void solve()
 {
-    int n , k ;
-    cin >> n >> k ;
-    int a = ( (n / 2 ) / ( k + 1) ) ;
-    cout << a << " " << k * a << " " << n - (a + ( k * a )) << endl ;
+    int n ;
+    cin >> n ;
+    int m = sqrt(n) ;
+    int i ; 
+    //cout << m << endl ;
+    for (i = m ; i >= 1 ; i--) {
+        if ((i * ( n / i)) == n) {
+            break ;
+        }
+    }
+    cout << 2 * (i + n / i) << endl ;
 }
-
 int32_t main()
 {
     fast ;
@@ -23,7 +28,7 @@ int32_t main()
     {
         solve() ;
     }
-    return 0;
+    return 0 ;
 }
 /*  CODED BY:-
  ___________________________________

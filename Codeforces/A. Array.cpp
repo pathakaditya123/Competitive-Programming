@@ -1,5 +1,4 @@
-// http://codeforces.com/problemset/problem/818/A
-
+// https://codeforces.com/problemset/problem/572/A
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -8,12 +7,23 @@ using namespace std;
 
 void solve()
 {
-    int n , k ;
-    cin >> n >> k ;
-    int a = ( (n / 2 ) / ( k + 1) ) ;
-    cout << a << " " << k * a << " " << n - (a + ( k * a )) << endl ;
+    int n1 , n2 ;
+    cin >> n1 >> n2 ;
+    int k , m ;
+    cin >> k >> m ;
+    vector<int> v1(n1) , v2(n2) ;
+    for (auto &x : v1) cin >> x ;
+    for (auto &x : v2) cin >> x ;
+    bool flag = false ;
+    for (int i = 0; i < k;  i++) {
+        if (v1[i] >= v2[n2 - m]) {
+            flag = true ;
+            break ;
+        }
+    }
+    if (flag) cout << "NO" << endl ;
+    else cout << "YES" << endl ;
 }
-
 int32_t main()
 {
     fast ;
@@ -23,7 +33,7 @@ int32_t main()
     {
         solve() ;
     }
-    return 0;
+    return 0 ;
 }
 /*  CODED BY:-
  ___________________________________

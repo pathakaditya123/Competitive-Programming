@@ -1,5 +1,3 @@
-// http://codeforces.com/problemset/problem/818/A
-
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -8,12 +6,28 @@ using namespace std;
 
 void solve()
 {
-    int n , k ;
-    cin >> n >> k ;
-    int a = ( (n / 2 ) / ( k + 1) ) ;
-    cout << a << " " << k * a << " " << n - (a + ( k * a )) << endl ;
-}
+	string t;
+	cin >> t;
 
+	int len = t.size();
+
+	int start = ( len - 1 ) / 2;
+	int end = start + 1;
+
+	while ( start >= 0 || end < len )
+	{	
+		if ( start >= 0 )
+		{
+			cout << t [start--] ;
+		}
+
+		if( end < len )
+		{
+			cout << t [end++];
+		}
+	}
+	cout << endl;
+}
 int32_t main()
 {
     fast ;
@@ -23,7 +37,7 @@ int32_t main()
     {
         solve() ;
     }
-    return 0;
+    return 0 ;
 }
 /*  CODED BY:-
  ___________________________________
