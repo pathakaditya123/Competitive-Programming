@@ -1,11 +1,11 @@
 // https://codeforces.com/problemset/problem/1360/B
-    
+
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
 #define fast ios_base::sync_with_stdio(false) ; cin.tie(0) ; cout.tie(0) ;
 #define endl '\n'
-    
+
 void solve()
 {
     int n ;
@@ -23,7 +23,7 @@ void solve()
     }
     cout << minn << endl ;
 }
-    
+
 int32_t main()
 {
     fast;
@@ -36,10 +36,10 @@ int32_t main()
     return 0 ;
 }
 /*  CODED BY:-
-    ___________________________________
+ ___________________________________
 |                       ___         |
 |  /\   /\  \ /  |  |  |___   |__|  |        
 | /~~\ /~~\  |   |__|   ___|  |  |  |
 |___________________________________|
-    
+ 
 */

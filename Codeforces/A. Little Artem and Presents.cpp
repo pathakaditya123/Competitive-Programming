@@ -10,8 +10,31 @@ void solve()
 {
     int n ;
     cin >> n ;
-    if(n % 3 == 0) cout << (n / 3) * 2 << endl ;
-    else cout << (n / 3) * 2 + 1 << endl ;
+    if(n == 2 or n == 1) cout << 1 << endl ;
+    else {
+        if(n & 1) {
+            int sum = 1 , count = 1 ;
+            while(sum <= n)
+            {
+                count++ ;
+                if(count & 1) sum++ ;
+                else sum += 2 ;
+            }
+            cout << count << endl ;
+        }
+        else
+        {
+            int sum = 2 , count = 1 ;
+            while(sum <= n)
+            {
+                count++ ;
+                if(count & 1) sum += 2 ;
+                else sum += 1 ;
+            }
+            cout << count << endl ;
+        }
+        
+    }
 }
 
 int32_t main()

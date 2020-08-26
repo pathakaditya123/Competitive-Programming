@@ -4,7 +4,7 @@ using namespace std;
 #define int long long
 #define fast ios_base::sync_with_stdio(false) ; cin.tie(0) ; cout.tie(0) ;
 #define endl '\n'
-    
+
 long long binpow(long long a, long long b) {
     long long res = 1;
     while (b > 0) {
@@ -15,9 +15,9 @@ long long binpow(long long a, long long b) {
     }
     return res;
 }
-    
+
 /* We can solve only only in three cases 1. n == 1 , 2. m == 1 and 3. n == m == 2 */
-    
+
 void solve()
 {
     int n , m ;
@@ -26,7 +26,7 @@ void solve()
     else if (n == 2 and m == 2) cout << "YES" << endl ;
     else cout << "NO" << endl ;
 }
-    
+
 int32_t main()
 {
     fast ;
@@ -39,10 +39,10 @@ int32_t main()
     return 0 ;
 }
 /*  CODED BY:-
-    ___________________________________
+ ___________________________________
 |                       ___         |
 |  /\   /\  \ /  |  |  |___   |__|  |        
 | /~~\ /~~\  |   |__|   ___|  |  |  |
 |___________________________________|
-    
+ 
 */

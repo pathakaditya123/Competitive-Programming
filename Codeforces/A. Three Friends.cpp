@@ -51,6 +51,7 @@ void solve()
             }
         }
     }
+    // max ( abs ( a - c ) + abs ( b - c ) + abs ( a - b ) - 4 , 0 )
 }
 int32_t main()
 {

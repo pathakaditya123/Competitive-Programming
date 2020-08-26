@@ -1,11 +1,11 @@
 // https://codeforces.com/problemset/problem/1343/B
-    
+
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
 #define fast ios_base::sync_with_stdio(false) ; cin.tie(0) ; cout.tie(0) ;
 #define endl '\n'
-    
+
 long long binpow(long long a, long long b) {
     long long res = 1;
     while (b > 0) {
@@ -16,7 +16,7 @@ long long binpow(long long a, long long b) {
     }
     return res;
 }
-    
+
 void solve()
 {
     int n ;
@@ -40,7 +40,7 @@ void solve()
     }
     
 }
-    
+
 int32_t main()
 {
     fast ;
@@ -53,10 +53,10 @@ int32_t main()
     return 0 ;
 }
 /*  CODED BY:-
-    ___________________________________
+ ___________________________________
 |                       ___         |
 |  /\   /\  \ /  |  |  |___   |__|  |        
 | /~~\ /~~\  |   |__|   ___|  |  |  |
 |___________________________________|
-    
+ 
 */
