@@ -32,6 +32,6 @@ public class BinodAndSubarrays {
                 System.out.println(index) ;
             }
         }
-        
+        sc.close();
     }
 }
