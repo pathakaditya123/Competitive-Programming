@@ -11,21 +11,27 @@ using namespace std ;
 void solve() {
     int n ;
     cin >> n ;
-    int count2 = 0 , count3 = 0 ;
-    while (n % 2 == 0)
-    {
-        n /= 2 ;
-        count2++ ;
-    }
-    while (n % 3 == 0)
-    {
-        n /= 3 ;
-        count3++ ;
-    }
-    if (n == 1 && count2 <= count3) {
-        cout << count3 - count2 + count3 << endl ;
-    }
-    else cout << -1 << endl ;                                 
+    string s = "" , s2 ;
+    map<int, int> mp ;
+    vector<int> v(n) ;
+    for (auto &x : v) {
+        cin >> x ;
+        mp[x]++ ;
+        s += to_string(x) ;
+    }           
+    s2 = s ;
+    reverse(s.begin(), s.end()) ;
+    if (s == s2) cout << "YES" << endl ;
+    else {
+        for (int i = 0 ; i < n - 2 ; i++) {
+            if ( v[i] == v[i + 2] ) {
+                //cout << v[i] << " " << v[i + 2] << endl ;
+                cout << "YES" << endl ;
+                return ;
+            }
+        }
+        cout << "NO" << endl ;
+    }                    
 }
 
 int32_t main() 
