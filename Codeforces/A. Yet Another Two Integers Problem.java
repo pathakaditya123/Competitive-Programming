@@ -17,5 +17,6 @@ class YetAnotherTwoIntegersProblem {
                                 System.out.println(ans + 1) ;
                         }
                 }
+                sc.close();
         }
 }
