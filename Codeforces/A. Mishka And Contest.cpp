@@ -4,7 +4,6 @@ using namespace std ;
 #define int long long
 #define fast ios_base::sync_with_stdio(false) ; cin.tie(0) ; cout.tie(0) ;
 #define endl '\n' 
-// Both solution are working 
 void solve() {
     int n , k , maxx = -99999 ;
     cin >> n >> k ;
