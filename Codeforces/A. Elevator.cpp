@@ -5,37 +5,30 @@ using namespace std;
 #define endl '\n'
 #define all(x)  (x).begin() , (x).end() 
 
-bool isPalindrome(string s) {
-        string t = s ;
-        reverse(t.begin() , t.end()) ;
-        if (s == t) return true ;
-        else return false ;
-}
-
 void solve()
 {
         string s ;
-        int n , size ;
+        int n ;
         cin >> s >> n ;
-        size = s.size() ;
-        int k = size / n ;
-        if (size % n != 0) {
-                cout << "NO" << endl ;
+        if (s == "front" and n == 1) {
+                cout << "L" << endl ;
         }
-        else {
-                for (int i = 0 ; i < size ; i += k) {
-                        if(!(isPalindrome(s.substr(i, k)))) {
-                                cout << "NO";
-                                return ;
-                        }
-                }
-                cout << "YES" << endl ;
+        else if (s == "front" and n == 2) {
+                cout << "R" << endl ;
+        }
+        else if (s == "back" and n == 1) {
+                cout << "R" << endl ;
+        }
+        else if (s == "back" and n == 2) {
+                cout << "L" << endl ;
         }
 }
 
 int32_t main()
 {
         fast ;
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout);
         int testcases = 1;
         //cin >> testcases ;
         while(testcases--)
