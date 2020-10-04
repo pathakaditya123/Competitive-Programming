@@ -1,4 +1,3 @@
-
 import java.util.* ;
 public class TrickyAlchemy {
     public static void main(String[] args) {
